@@ -1,0 +1,73 @@
+.tabs{
+  display: flex;
+  justify-content: space-between;
+  max-width: 700px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.tabs-item{
+  width: 100%;
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #efeeee;
+  text-align: center;
+  transition: all .4s ease-in-out;
+}
+
+.tabs-item:hover{
+  background: rgb(195, 223, 255);
+}
+
+.tabs-item.tabs-item_active{
+  background: rgb(195, 223, 255);
+  transition: all .4s ease-in-out;
+}
+
+.tabs-content{
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  background: rgb(195, 223, 255);
+}
+
+.tabs-content-item{
+  display: none;
+}
+
+.tabs-hide{
+  display: none;
+}
+
+.tabs-show{
+  display: block;
+}
+
+.fade-tabs{
+  -webkit-animation-name: fade;
+  animation-name: fade;
+-webkit-animation-duration: 2.5s;
+  animation-duration: 2.5s;
+-webkit-animation-name: fade;
+-webkit-animation-duration: 2.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
