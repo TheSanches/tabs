@@ -16,9 +16,6 @@ window.addEventListener('DOMContentLoaded', function(){
 
   tabsShow(0);
 
-  function tabsHide(hideTabs){
-    tabsContent[hideTabs].classList.remove('tabs-show'); 
-  }
 
   tabs.addEventListener('click', function(e){
     let tabsTarget = e.target;
