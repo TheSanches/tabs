@@ -1,12 +1,13 @@
-function tabs(tabsAll, tab, tabsContentItem) {
+window.addEventListener('DOMContentLoaded', function(){
+
   'use strict';
-  let tabs = document.querySelector(tab),
-    tabsItem = document.querySelectorAll(tabsAll),
-    tabsContent = document.querySelectorAll(tabsContentItem);
+  let tabs = document.querySelector('.tabs'),
+      tabsItem = document.querySelectorAll('.tabs-item'),
+      tabsContent = document.querySelectorAll('.tabs-content-item');
 
 
-  function tabsShow(visibleTabs) {
-    for (let i = visibleTabs; i < tabsContent.length; i++) {
+  function tabsShow(visibleTabs){
+    for(let i = visibleTabs; i < tabsContent.length; i++){
       tabsContent[i].classList.add('tabs-show');
       tabsItem[i].classList.add('tabs-item_active');
       break;
@@ -15,10 +16,11 @@ function tabs(tabsAll, tab, tabsContentItem) {
 
   tabsShow(0);
 
-  tabs.addEventListener('click', function (e) {
+
+  tabs.addEventListener('click', function(e){
     let tabsTarget = e.target;
-    for (let i = 0; i < tabsItem.length; i++) {
-      if (tabsTarget == tabsItem[i]) {
+    for(let i = 0; i < tabsItem.length; i++){
+      if(tabsTarget == tabsItem[i]){
         tabsItem[i].classList.add('tabs-item_active');
         tabsShow(i);
       } else {
@@ -27,6 +29,5 @@ function tabs(tabsAll, tab, tabsContentItem) {
       }
     }
   });
-}
 
-tabs('.tabs-item', '.tabs', '.tabs-content-item');
+});
